@@ -1,0 +1,55 @@
+/* 480+ */
+@media screen and (min-width:480px) {
+
+    .section {
+        max-width: 480px;
+    }
+
+    .container {
+        max-width: 428px;
+    }
+
+    /* HEADER */
+    .mob-menu-link {
+        font-size: 36px;
+    }
+
+    .mob-menu-contacts-number {
+        font-size: 36px;
+    }
+
+    .mob-menu-social-list {
+    gap: 56px;
+}
+
+    /* Employees */
+
+    /* CUSTOMERS */
+
+    /* PORTFOLIO */
+
+    /* MODAL WINDOW */
+    .modal {
+        width: 408px;
+        height: 584px;
+    }
+
+    .modal-form-check-desc {
+        font-size: 12px;
+        letter-spacing: 0.02em;
+    }
+}
+
+
+
+/* 480-767 */
+@media screen and (min-width:480px) and (max-width:767px) {
+
+    /* Employees */
+    .employees-container {
+        padding-left: 82px;
+        padding-right: 82px;
+    }
+
+    /* PORTFOLIO */
+}

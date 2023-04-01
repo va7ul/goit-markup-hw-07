@@ -13,6 +13,9 @@
 		/>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.min.css" />
 		<link rel="stylesheet" href="./css/styles.css" />
+		<link rel="stylesheet" href="./css/mobile.css" />
+		<link rel="stylesheet" href="./css/tablet.css" />
+		<link rel="stylesheet" href="./css/desktop.css" />
 	</head>
 	<body>
 		<!-- Header -->
@@ -28,14 +31,93 @@
 				</nav>
 				<address class="address">
 					<ul class="contacts list">
-						<li class="contacts-item"
-							><a class="contacts-email link" href="mailto:info@devstudio.com">info@devstudio.com</a></li
-						>
-						<li class="contacts-item"
-							><a class="contacts-number link" href="tel:+110001111111">+11 (000) 111-11-11</a></li
-						>
+						<li class="contacts-item">
+							<a class="contacts-email link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+						</li>
+						<li class="contacts-item">
+							<a class="contacts-number link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+						</li>
 					</ul>
 				</address>
+
+				<button class="mobile-menu-open-btn js-open-menu" type="button" aria-expanded="false">
+					<svg
+						class="mobile-menu-open-icon"
+						width="32px"
+						height="22px"
+						aria-label="Mobile menu switcher"
+						aria-controls="mob-menu-container"
+					>
+						<use class="icon-menu-burger" href="./images/icons.svg#icon-menu-burger" width="32px" height="22px"></use>
+					</svg>
+				</button>
+
+				<div class="mob-menu-container js-menu-container is-hidden" id="mob-menu-container">
+					<button class="mobile-menu-close-btn js-close-menu" type="button">
+						<svg
+							class="mobile-menu-close-icon"
+							width="8px"
+							height="8px"
+							aria-label="Mobile menu switcher"
+							aria-controls="mob-menu-container"
+						>
+							<use class="icon-close" href="./images/icons.svg#icon-close"></use>
+						</svg>
+					</button>
+
+					<nav class="mob-page-nav">
+						<ul class="mob-menu list">
+							<li class="mob-menu-item"><a class="mob-menu-link link current" href="./index.html">Studio</a></li>
+							<li class="mob-menu-item"><a class="mob-menu-link link" href="./portfolio.html">Portfolio</a></li>
+							<li class="mob-menu-item"><a class="mob-menu-link special link" href="">Contacts</a></li>
+						</ul>
+					</nav>
+
+					<div class="mob-menu-address">
+						<ul class="mob-menu-contacts list">
+							<li class="mob-menu-contacts-item">
+								<a class="mob-menu-contacts-number link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+							</li>
+							<li class="mob-menu-contacts-item">
+								<a class="mob-menu-contacts-email link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+							</li>
+						</ul>
+
+						<ul class="mob-menu-social-list list">
+							<li class="mob-menu-social-item">
+								<a href="" class="mob-menu-social-link">
+									<svg class="mob-menu-social-icon" width="24px" height="24px">
+										<use href="./images/icons.svg#icon-instagram"></use>
+									</svg>
+								</a>
+							</li>
+
+							<li class="mob-menu-social-item">
+								<a href="" class="mob-menu-social-link">
+									<svg class="mob-menu-social-icon" width="24px" height="24px">
+										<use href="./images/icons.svg#icon-twitter"></use>
+									</svg>
+								</a>
+							</li>
+
+							<li class="mob-menu-social-item">
+								<a href="" class="mob-menu-social-link">
+									<svg class="mob-menu-social-icon" width="24px" height="24px">
+										<use href="./images/icons.svg#icon-facebook"></use>
+									</svg>
+								</a>
+							</li>
+
+							<li class="mob-menu-social-item">
+								<a href="" class="mob-menu-social-link">
+									<svg class="mob-menu-social-icon" width="24px" height="24px">
+										<use href="./images/icons.svg#icon-linkedin"></use>
+									</svg>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
 			</div>
 		</header>
 		<!-- Main -->
@@ -57,7 +139,13 @@
 						<li class="works-item">
 							<a href="" class="works-item-link link">
 								<div class="works-img-wrapper">
-									<img src="./images/portfolio/work1.jpg" alt="Example of our works" width="360" height="300" />
+									<img
+										srcset="./images/portfolio/work1-1x.jpg 1x, ./images/portfolio/work1-2x.jpg 2x"
+										src="./images/portfolio/work1-1x.jpg"
+										alt="Example of our works"
+										width="360"
+										height="300"
+									/>
 									<p class="overlay"
 										>14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic
 										Fruit Ecommerce App · Cloud Storage App
@@ -73,7 +161,13 @@
 						<li class="works-item">
 							<a href="" class="works-item-link link">
 								<div class="works-img-wrapper">
-									<img src="./images/portfolio/work2.jpg" alt="Example of our works" width="360" height="300" />
+									<img
+										srcset="./images/portfolio/work2-1x.jpg 1x, ./images/portfolio/work2-2x.jpg 2x"
+										src="./images/portfolio/work2-1x.jpg"
+										alt="Example of our works"
+										width="360"
+										height="300"
+									/>
 									<p class="overlay"
 										>14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic
 										Fruit Ecommerce App · Cloud Storage App
@@ -89,7 +183,13 @@
 						<li class="works-item">
 							<a href="" class="works-item-link link">
 								<div class="works-img-wrapper">
-									<img src="./images/portfolio/work3.jpg" alt="Example of our works" width="360" height="300" />
+									<img
+										srcset="./images/portfolio/work3-1x.jpg 1x, ./images/portfolio/work3-2x.jpg 2x"
+										src="./images/portfolio/work3-1x.jpg"
+										alt="Example of our works"
+										width="360"
+										height="300"
+									/>
 									<p class="overlay"
 										>14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic
 										Fruit Ecommerce App · Cloud Storage App
@@ -105,7 +205,13 @@
 						<li class="works-item">
 							<a href="" class="works-item-link link">
 								<div class="works-img-wrapper">
-									<img src="./images/portfolio/work4.jpg" alt="Example of our works" width="360" height="300" />
+									<img
+										srcset="./images/portfolio/work4-1x.jpg 1x, ./images/portfolio/work4-2x.jpg 2x"
+										src="./images/portfolio/work4-1x.jpg"
+										alt="Example of our works"
+										width="360"
+										height="300"
+									/>
 									<p class="overlay"
 										>14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic
 										Fruit Ecommerce App · Cloud Storage App
@@ -121,7 +227,13 @@
 						<li class="works-item">
 							<a href="" class="works-item-link link">
 								<div class="works-img-wrapper">
-									<img src="./images/portfolio/work5.jpg" alt="Example of our works" width="360" height="300" />
+									<img
+										srcset="./images/portfolio/work5-1x.jpg 1x, ./images/portfolio/work5-2x.jpg 2x"
+										src="./images/portfolio/work5-1x.jpg"
+										alt="Example of our works"
+										width="360"
+										height="300"
+									/>
 									<p class="overlay"
 										>14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic
 										Fruit Ecommerce App · Cloud Storage App
@@ -137,7 +249,13 @@
 						<li class="works-item">
 							<a href="" class="works-item-link link">
 								<div class="works-img-wrapper">
-									<img src="./images/portfolio/work6.jpg" alt="Example of our works" width="360" height="300" />
+									<img
+										srcset="./images/portfolio/work6-1x.jpg 1x, ./images/portfolio/work6-2x.jpg 2x"
+										src="./images/portfolio/work6-1x.jpg"
+										alt="Example of our works"
+										width="360"
+										height="300"
+									/>
 									<p class="overlay"
 										>14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic
 										Fruit Ecommerce App · Cloud Storage App
@@ -153,7 +271,13 @@
 						<li class="works-item">
 							<a href="" class="works-item-link link">
 								<div class="works-img-wrapper">
-									<img src="./images/portfolio/work7.jpg" alt="Example of our works" width="360" height="300" />
+									<img
+										srcset="./images/portfolio/work7-1x.jpg 1x, ./images/portfolio/work7-2x.jpg 2x"
+										src="./images/portfolio/work7-1x.jpg"
+										alt="Example of our works"
+										width="360"
+										height="300"
+									/>
 									<p class="overlay"
 										>14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic
 										Fruit Ecommerce App · Cloud Storage App
@@ -169,7 +293,13 @@
 						<li class="works-item">
 							<a href="" class="works-item-link link">
 								<div class="works-img-wrapper">
-									<img src="./images/portfolio/work8.jpg" alt="Example of our works" width="360" height="300" />
+									<img
+										srcset="./images/portfolio/work8-1x.jpg 1x, ./images/portfolio/work8-2x.jpg 2x"
+										src="./images/portfolio/work8-1x.jpg"
+										alt="Example of our works"
+										width="360"
+										height="300"
+									/>
 									<p class="overlay"
 										>14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic
 										Fruit Ecommerce App · Cloud Storage App
@@ -185,7 +315,13 @@
 						<li class="works-item">
 							<a href="" class="works-item-link link">
 								<div class="works-img-wrapper">
-									<img src="./images/portfolio/work9.jpg" alt="Example of our works" width="360" height="300" />
+									<img
+										srcset="./images/portfolio/work9-1x.jpg 1x, ./images/portfolio/work9-2x.jpg 2x"
+										src="./images/portfolio/work9-1x.jpg"
+										alt="Example of our works"
+										width="360"
+										height="300"
+									/>
 									<p class="overlay"
 										>14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic
 										Fruit Ecommerce App · Cloud Storage App
@@ -202,8 +338,8 @@
 			</section>
 		</main>
 		<!-- Footer -->
-		<footer class="page-footer">
-			<div class="container-footer container">
+		<footer class="page-footer section">
+			<div class="footer-container container">
 				<div class="about-footer">
 					<a class="footer-logo link" href="./index.html">Web<span class="second-word-logo-footer">Studio</span></a>
 					<p class="footer-text">
@@ -269,5 +405,6 @@
 				</form>
 			</div>
 		</footer>
+		<script src="./js/mobile-menu.js"></script>
 	</body>
 </html>

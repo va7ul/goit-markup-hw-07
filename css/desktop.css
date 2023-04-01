@@ -1,0 +1,116 @@
+/* 1200+ */
+@media screen and (min-width:1200px) {
+
+    .section {
+        max-width: 1440px;
+    }
+
+    .container {
+        max-width: 1158px;
+    }
+
+    .section {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    /* HEADER */
+    .page-logo {
+        margin-right: 76px;
+    }
+
+    .contacts {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    /* HERO */
+    .hero {
+        padding-top: 188px;
+        padding-bottom: 188px;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(../images/hero/bg-desctop-1x.jpg);
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (-o-min-device-pixel-ratio: 2/1),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .hero {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                    rgba(46, 47, 66, 0.7)),
+                url(../images/hero/bg-desctop-2x.jpg);
+        }
+    }
+
+
+    .main-title {
+        margin-bottom: 48px;
+    }
+
+    /* Features */
+    .features-list-item {
+        flex-basis: calc((100% - 3 * var(--card-set-gap)) / 4);
+    }
+
+    .features-icon-bg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 112px;
+        margin-bottom: 8px;
+        background-color: var(--secondary-bg-color);
+        border-radius: 4px;
+    }
+
+    /* About */
+    .about.section {
+        padding-top: 0;
+    }
+
+    .about-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--card-set-gap);
+    }
+
+    .about-item {
+        flex-basis: calc((100% - 2 * var(--card-set-gap)) / 3);
+    }
+
+    /* Employees */
+
+    /* CUSTOMERS */
+
+    /* FOOTER */
+    .page-footer {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .social-footer {
+        margin-left: 120px;
+    }
+
+    .footer-form {
+        margin-left: auto;
+    }
+
+    /* PORTFOLIO */
+    .portfolio {
+        padding-top: 96px;
+        padding-bottom: 120px;
+    }
+
+    .filter-list {
+        margin-bottom: 72px;
+    }
+
+    .works-item {
+        flex-basis: calc((100% - 2 * var(--card-set-gap)) / 3);
+    }
+}

@@ -12,13 +12,16 @@
 		/>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.min.css" />
 		<link rel="stylesheet" href="./css/styles.css" />
+		<link rel="stylesheet" href="./css/mobile.css" />
+		<link rel="stylesheet" href="./css/tablet.css" />
+		<link rel="stylesheet" href="./css/desktop.css" />
 		<title>Studio</title>
 	</head>
 	<body>
 		<!-- Header -->
 		<header class="page-header">
-			<div class="page-header-container container"
-				><nav class="page-nav">
+			<div class="page-header-container container">
+				<nav class="page-nav">
 					<a class="page-logo link" href="./index.html">Web<span class="second-word-logo">Studio</span></a>
 					<ul class="menu list">
 						<li class="menu-item"><a class="menu-link link current" href="./index.html">Studio</a></li>
@@ -28,26 +31,103 @@
 				</nav>
 				<address class="address">
 					<ul class="contacts list">
-						<li class="contacts-item"
-							><a class="contacts-email link" href="mailto:info@devstudio.com">info@devstudio.com</a></li
-						>
-						<li class="contacts-item"
-							><a class="contacts-number link" href="tel:+110001111111">+11 (000) 111-11-11</a></li
-						>
+						<li class="contacts-item">
+							<a class="contacts-email link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+						</li>
+						<li class="contacts-item">
+							<a class="contacts-number link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+						</li>
 					</ul>
 				</address>
+
+				<button class="mobile-menu-open-btn js-open-menu" type="button" aria-expanded="false">
+					<svg
+						class="mobile-menu-open-icon"
+						width="32px"
+						height="22px"
+						aria-label="Mobile menu switcher"
+						aria-controls="mob-menu-container"
+					>
+						<use class="icon-menu-burger" href="./images/icons.svg#icon-menu-burger" width="32px" height="22px"></use>
+					</svg>
+				</button>
+
+				<div class="mob-menu-container js-menu-container is-hidden" id="mob-menu-container">
+					<button class="mobile-menu-close-btn js-close-menu" type="button">
+						<svg
+							class="mobile-menu-close-icon"
+							width="8px"
+							height="8px"
+							aria-label="Mobile menu switcher"
+							aria-controls="mob-menu-container"
+						>
+							<use class="icon-close" href="./images/icons.svg#icon-close"></use>
+						</svg>
+					</button>
+
+					<nav class="mob-page-nav">
+						<ul class="mob-menu list">
+							<li class="mob-menu-item"><a class="mob-menu-link link current" href="./index.html">Studio</a></li>
+							<li class="mob-menu-item"><a class="mob-menu-link link" href="./portfolio.html">Portfolio</a></li>
+							<li class="mob-menu-item"><a class="mob-menu-link special link" href="">Contacts</a></li>
+						</ul>
+					</nav>
+
+					<div class="mob-menu-address">
+						<ul class="mob-menu-contacts list">
+							<li class="mob-menu-contacts-item">
+								<a class="mob-menu-contacts-number link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+							</li>
+							<li class="mob-menu-contacts-item">
+								<a class="mob-menu-contacts-email link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+							</li>
+						</ul>
+
+						<ul class="mob-menu-social-list list">
+							<li class="mob-menu-social-item">
+								<a href="" class="mob-menu-social-link">
+									<svg class="mob-menu-social-icon" width="24px" height="24px">
+										<use href="./images/icons.svg#icon-instagram"></use>
+									</svg>
+								</a>
+							</li>
+
+							<li class="mob-menu-social-item">
+								<a href="" class="mob-menu-social-link">
+									<svg class="mob-menu-social-icon" width="24px" height="24px">
+										<use href="./images/icons.svg#icon-twitter"></use>
+									</svg>
+								</a>
+							</li>
+
+							<li class="mob-menu-social-item">
+								<a href="" class="mob-menu-social-link">
+									<svg class="mob-menu-social-icon" width="24px" height="24px">
+										<use href="./images/icons.svg#icon-facebook"></use>
+									</svg>
+								</a>
+							</li>
+
+							<li class="mob-menu-social-item">
+								<a href="" class="mob-menu-social-link">
+									<svg class="mob-menu-social-icon" width="24px" height="24px">
+										<use href="./images/icons.svg#icon-linkedin"></use>
+									</svg>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
 			</div>
 		</header>
 		<!-- Main -->
 		<main>
 			<!-- Hero section -->
-			<section class="hero">
-				<!-- <div class="overlay"> -->
+			<section class="hero section">
 				<div class="container">
 					<h1 class="main-title">Effective Solutions for Your Business</h1>
 					<button class="modal-btn" type="button" data-modal-open>Order Service</button>
 				</div>
-				<!-- </div> -->
 			</section>
 			<!-- Our features section -->
 			<section class="features section">
@@ -60,10 +140,12 @@
 									<use href="./images/icons.svg#icon-antenna"></use>
 								</svg>
 							</div>
-							<h3 class="features-title text-title">Strategy</h3>
-							<p class="features-text text">
-								Our goal is to identify the business problem to walk away with the perfect and creative solution.
-							</p>
+							<div class="features-desc">
+								<h3 class="features-title text-title">Strategy</h3>
+								<p class="features-text text">
+									Our goal is to identify the business problem to walk away with the perfect and creative solution.
+								</p>
+							</div>
 						</li>
 
 						<li class="features-list-item">
@@ -110,26 +192,50 @@
 					<h2 class="section-title">What are we doing</h2>
 					<ul class="about-list list">
 						<li class="about-item">
-							<img src="./images/about/work-process1.jpg" alt="Work process" width="360" height="300" />
+							<img
+								srcset="./images/about/work-process1-1x.jpg 1x, ./images/about/work-process1-2x.jpg 2x"
+								src="./images/about/work-process1-1x.jpg"
+								alt="Work process"
+								width="360"
+								height="300"
+							/>
 						</li>
 
 						<li class="about-item">
-							<img src="./images/about/work-process2.jpg" alt="Work process" width="360" height="300" />
+							<img
+								srcset="./images/about/work-process2-1x.jpg 1x, ./images/about/work-process2-2x.jpg 2x"
+								src="./images/about/work-process2-1x.jpg"
+								alt="Work process"
+								width="360"
+								height="300"
+							/>
 						</li>
 
 						<li class="about-item">
-							<img src="./images/about/work-process3.jpg" alt="Work process" width="360" height="300" />
+							<img
+								srcset="./images/about/work-process3-1x.jpg 1x, ./images/about/work-process3-2x.jpg 2x"
+								src="./images/about/work-process3-1x.jpg"
+								alt="Work process"
+								width="360"
+								height="300"
+							/>
 						</li>
 					</ul>
 				</div>
 			</section>
 			<!-- Our team section -->
 			<section class="employees section">
-				<div class="container">
+				<div class="employees-container container">
 					<h2 class="section-title">Our Team</h2>
 					<ul class="employees-list list">
 						<li class="employees-item">
-							<img src="./images/employees/mark-guerrero.jpg" alt="Photo of employee" width="264" height="260" />
+							<img
+								srcset="./images/employees/mark-guerrero-1x.jpg 1x, ./images/employees/mark-guerrero-2x.jpg 2x"
+								src="./images/employees/mark-guerrero-1x.jpg"
+								alt="Photo of employee"
+								width="264"
+								height="260"
+							/>
 							<div class="employees-card">
 								<h3 class="employees-title text-title">Mark Guerrero</h3>
 								<p class="employees-text text">Product Designer</p>
@@ -170,7 +276,13 @@
 						</li>
 
 						<li class="employees-item">
-							<img src="./images/employees/tom-ford.jpg" alt="Photo of employee" width="264" height="260" />
+							<img
+								srcset="./images/employees/tom-ford-1x.jpg 1x, ./images/employees/tom-ford-2x.jpg 2x"
+								src="./images/employees/tom-ford-1x.jpg"
+								alt="Photo of employee"
+								width="264"
+								height="260"
+							/>
 							<div class="employees-card">
 								<h3 class="employees-title text-title">Tom Ford</h3>
 								<p class="employees-text text">Frontend Developer</p>
@@ -208,7 +320,13 @@
 						</li>
 
 						<li class="employees-item">
-							<img src="./images/employees/camila-garcia.jpg" alt="Photo of employee" width="264" height="260" />
+							<img
+								srcset="./images/employees/camila-garcia-1x.jpg 1x, ./images/employees/camila-garcia-2x.jpg 2x"
+								src="./images/employees/camila-garcia-1x.jpg"
+								alt="Photo of employee"
+								width="264"
+								height="260"
+							/>
 							<div class="employees-card">
 								<h3 class="employees-title text-title">Camila Garcia</h3>
 								<p class="employees-text text">Marketing</p>
@@ -246,7 +364,13 @@
 						</li>
 
 						<li class="employees-item">
-							<img src="./images/employees/daniel-wilson.jpg" alt="Photo of employee" width="264" height="260" />
+							<img
+								srcset="./images/employees/daniel-wilson-1x.jpg 1x, ./images/employees/daniel-wilson-2x.jpg 2x"
+								src="./images/employees/daniel-wilson-1x.jpg"
+								alt="Photo of employee"
+								width="264"
+								height="260"
+							/>
 							<div class="employees-card">
 								<h3 class="employees-title text-title">Daniel Wilson</h3>
 								<p class="employees-text text">UI Designer</p>
@@ -287,7 +411,7 @@
 			</section>
 			<!-- Customers section -->
 			<section class="customers section">
-				<div class="container">
+				<div class="custumers-container container">
 					<h2 class="section-title">Customers</h2>
 					<ul class="customers-list list">
 						<li class="customers-item">
@@ -343,7 +467,7 @@
 		</main>
 		<!-- Footer -->
 		<footer class="page-footer">
-			<div class="container-footer container">
+			<div class="footer-container container">
 				<div class="about-footer">
 					<a class="footer-logo link" href="./index.html">Web<span class="second-word-logo-footer">Studio</span></a>
 					<p class="footer-text">
@@ -412,7 +536,7 @@
 		<!-- Modal Window -->
 		<div class="backdrop is-hidden" data-modal>
 			<div class="modal">
-				<button type="button" class="modal-close-btn" data-modal-close>
+				<button class="modal-close-btn" type="button" data-modal-close>
 					<svg class="modal-close-btn-icon" width="8px" height="8px">
 						<use href="./images/icons.svg#icon-close"></use>
 					</svg>
@@ -478,5 +602,6 @@
 			</div>
 		</div>
 		<script src="./js/modal.js"></script>
+		<script src="./js/mobile-menu.js"></script>
 	</body>
 </html>

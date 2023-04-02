@@ -314,7 +314,7 @@ body {
     color: var(--accent-color);
 }
 
-.special {
+.mob-menu-link.current {
     color: var(--accent-color);
 }
 
@@ -386,7 +386,6 @@ body {
 /* ==================== HERO ==================== */
 
 .hero {
-    min-height: 600px;
     margin: 0 auto;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),
             rgba(46, 47, 66, 0.7)),
@@ -474,7 +473,6 @@ body {
 /* ==================== Employees ==================== */
 
 .employees {
-    padding-bottom: 128px;
     background-color: var(--secondary-bg-color);
 }
 
@@ -547,7 +545,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 168px;
+    width: 190px;
     height: 88px;
     border: 1px solid #8E8F99;
     border-radius: 4px;

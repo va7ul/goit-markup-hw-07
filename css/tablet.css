@@ -1,10 +1,6 @@
 /* 768+ */
 @media screen and (min-width:768px) {
 
-    .section {
-        max-width: 768px;
-    }
-
     .container {
         max-width: 768px;
     }
@@ -116,9 +112,6 @@
     }
 
     /* Employees */
-    .employees {
-        padding-bottom: 104px;
-    }
 
     .employees-list {
         row-gap: calc(var(--mobile-set-gap) * 4);
@@ -134,6 +127,10 @@
     /* CUSTOMERS */
     .customers-list {
         column-gap: var(--card-set-gap);
+    }
+
+    .customers-list-link {
+        width: 168px;
     }
 
     /* FOOTER */
